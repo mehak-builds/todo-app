@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode to do List</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: white;
+        }
+        .input-container{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+         
+        }
+        input[type="text"]{
+            width: 70%;
+            padding: 10px;background-color: #333333;
+            border-radius: 5px;
+            color: #fff;
+            outline: none;
+               border: none;
+        }
+        button{
+            width: 25%;
+            padding: 10px;
+            background-color: #6200ea;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ;
+            
+        }
+        button:hover{
+            background-color: #3700b3;
+            cursor: pointer;
+        }
+        ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        #todo-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+.completed {
+    text-decoration: line-through;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="input-container">
+            <input type="text" id="todo-input" placeholder="Add a new task...">
+            <button id="add-task-btn">Add Task</button>
+        </div>//
+        <ul id="todo-list"></ul> 
+        <!-- value of li will be added dynamically -->
+    </div>
+    <script src="./todo.js"></script>
+</body>
+</html>
